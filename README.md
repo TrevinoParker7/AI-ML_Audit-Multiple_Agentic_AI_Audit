@@ -14,7 +14,8 @@ This report reframes Cypronetics’s security posture through the lens of **Mult
 ---
 
 - **NIST Cybersecurity Framework (CSF 2.0)**  
-- **NIST AI Risk Management Framework (AI RMF 1.0)**  
+- **NIST AI Risk Management Framework (AI RMF 1.0)**
+- **NIST AI RMF Playbook** 
 - **MITRE ATLAS (Adversarial Threat Landscape for AI Systems)**  
 - **OWASP Top 10 for LLMs**  
 - **ISO/IEC 23894:2023 (AI Risk Management)**  
