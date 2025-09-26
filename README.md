@@ -84,6 +84,9 @@ The assessment identifies:
 
 ---
 
+<img width="1860" height="1510" alt="image" src="https://github.com/user-attachments/assets/96ac6f23-907a-44d3-acdf-6da246bbba2a" />
+
+
 ## Audit Findings by CSF Function
 
 ---
@@ -107,7 +110,9 @@ Without governance, AI systems operate without accountability, exposing Cypronet
 2. Create an **AI Risk Register** aligned with NIST AI RMF.  
 3. Define **AI model accountability policies** (bias monitoring, explainability, fairness).  
 4. Integrate **regulatory scanning** for compliance with EU AI Act and U.S. Executive Orders.  
-5. Implement **AI ethical review boards** for high-risk use cases.  
+5. Implement **AI ethical review boards** for high-risk use cases.
+
+<img width="1740" height="1565" alt="image" src="https://github.com/user-attachments/assets/1c25e7c8-162f-4adc-87ba-dfccd9ad9f57" />
 
 ---
 
@@ -130,7 +135,9 @@ Unidentified AI assets and supply chain blind spots create **shadow AI risks** a
 2. Enforce **AI SBOM requirements** (Model Bills of Materials).  
 3. Track **model provenance** using cryptographic signatures.  
 4. Classify **datasets by risk sensitivity**.  
-5. Integrate **vendor risk assessments** for external AI/LLM providers.  
+5. Integrate **vendor risk assessments** for external AI/LLM providers.
+
+<img width="2962" height="1155" alt="image" src="https://github.com/user-attachments/assets/bd7d8f26-400e-4843-99c3-9030ad2cd525" />
 
 ---
 
@@ -153,7 +160,9 @@ Adversaries could **inject malicious prompts**, **steal embeddings**, or **compr
 2. Deploy **prompt injection filters / LLM firewalls**.  
 3. Isolate **training vs inference environments**.  
 4. Protect embeddings with **encryption at rest & in transit**.  
-5. Sign models with **cryptographic attestation**.  
+5. Sign models with **cryptographic attestation**.
+
+<img width="2830" height="1550" alt="image" src="https://github.com/user-attachments/assets/01dc6d3f-b2f4-4f50-a399-fa28485db53b" />
 
 ---
 
