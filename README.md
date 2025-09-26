@@ -1,4 +1,5 @@
-# Cypronetics Multi-Agentic AI GRC Analyst Audit Report
+# Cypronetics Multi-Agentic AI & LLM GRC Analyst Audit Report
+<img width="1755" height="1745" alt="image" src="https://github.com/user-attachments/assets/20d609e4-7c7e-43be-aa34-ff821711efdf" />
 
 ---
 
@@ -8,7 +9,7 @@ Cypronetics Enterprises has begun implementing cybersecurity measures in line wi
 
 This report reframes Cypronetics’s security posture through the lens of **Multi-Agentic AI**, **Large Language Models (LLMs)**, and **AI-driven Agent ecosystems**, applying industry best practices from:  
 
-# Cypronetics Multi-Agentic AI Governance, Risk & Compliance (GRC) Audit Report – Q1 2025
+# Cypronetics Multi-Agentic AI Governance, Risk & Compliance (GRC) and LLM Audit Report – Q1 2025
 
 ---
 
