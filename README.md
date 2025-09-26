@@ -242,6 +242,20 @@ AI incidents could result in **long-term outages**, **loss of trust**, and **dat
 
 ---
 
+## Compliance Matrix
+
+| Standard/Framework | Coverage | Notes                              |
+| ------------------ | -------- | ---------------------------------- |
+| NIST CSF 2.0       | Partial  | Requires AI-specific mapping       |
+| NIST AI RMF 1.0    | Partial  | Risk register not complete         |
+| ISO/IEC 23894      | Partial  | Missing model provenance tracking  |
+| MITRE ATLAS        | Minimal  | Red-team exercises absent          |
+| OWASP LLM Top 10   | Minimal  | Prompt injection detection missing |
+| EU AI Act          | Minimal  | Compliance readiness not verified  |
+
+
+---
+
 ## Roadmap to AI GRC Maturity
 
 ### Phase 1 – Foundation
@@ -311,3 +325,136 @@ Cypronetics remains in the **early stages of AI GRC maturity**, with **critical 
 
 **Final Assessment:** Cypronetics must prioritize **AI GRC governance, adversarial detection, and compliance readiness** to secure its future in the rapidly evolving AI landscape.  
 
+### Evidence – IAM Review
+- IAM roles reviewed in terraform/6_agents/main.tf
+- Minimal privilege confirmed (✔️)
+- AI-specific scoping missing (❌)
+
+### Evidence – Model Training
+- Logs from Jan–Mar 2025 reviewed
+- No dataset provenance metadata (❌)
+- No bias testing (❌)
+
+### Evidence – Vulnerability Management
+- Tenable scans (Dec 2024) reviewed
+- Critical CVEs found in container images (❌)
+- Patch compliance: 70% (below SLA)
+  
+---
+
+### AI GRC Risk Heatmap with Severity Levels
+
+```mermaid
+graph LR
+    High[🔥 High Risk] -->|Critical| PromptInjection[Prompt Injection]
+    High -->|Critical| DataPoisoning[Data Poisoning]
+    Medium[⚠️ Medium Risk] -->|Elevated| ModelEvasion[Model Evasion]
+    Medium -->|Elevated| EmbeddingExfiltration[Embedding Exfiltration]
+    Low[✅ Low Risk] -->|Monitored| Drift[Model Drift]
+    Low -->|Monitored| VendorRisk[Vendor Model Risk]
+```
+---
+
+### Appendix B – Risk Map
+```mermaid
+flowchart LR
+    subgraph External Threats
+        A[Prompt Injection]
+        B[Data Poisoning]
+        C[Adversarial Example]
+    end
+
+    subgraph Internal Risks
+        D[Unscoped IAM Roles]
+        E[Lack of Provenance]
+    end
+
+    A --> F[Data Exfiltration]
+    B --> G[Model Drift]
+    C --> H[Incorrect Decisions]
+    D --> F
+    E --> G
+    F --> I[Regulatory Breach]
+    G --> I
+    H --> J[Reputational Loss]
+```
+---
+
+### Agent-to-Agent Data Flow (Attack Surface Map)
+
+```mermaid
+flowchart TD
+    UserInput[User Input] --> Planner[Planner Agent]
+    Planner --> Researcher[Researcher Agent]
+    Planner --> Reporter[Reporter Agent]
+    Researcher --> Scheduler[Scheduler Agent]
+    Scheduler --> Retirement[Retirement Agent]
+
+    %% Threat Paths
+    UserInput -.->|Prompt Injection| Planner
+    Researcher -.->|Data Poisoning| Planner
+    Reporter -.->|Embedding Leak| External[External API]
+    External -.->|Supply Chain Attack| Researcher
+```
+
+---
+
+### AI Incident Response Workflow
+
+```mermaid
+
+flowchart TD
+    Detect[🚨 Detect AI Incident] --> Classify[Classify Incident Type]
+    Classify -->|Prompt Injection| Contain1[Contain & Rollback]
+    Classify -->|Data Poisoning| Contain2[Quarantine Model]
+    Classify -->|Agent Compromise| Contain3[Revoke IAM Keys]
+    Contain1 --> Report[Report to AI Governance Board]
+    Contain2 --> Report
+    Contain3 --> Report
+    Report --> Recover[Model Recovery & Risk Reassessment]
+    Recover --> Improve[Continuous Improvement Cycle]
+
+
+```
+
+---
+
+### AI Model Lifecycle Security (Pipeline Diagram)
+
+```mermaid
+
+flowchart LR
+    Data[📂 Data Collection] --> Train[🧠 Model Training]
+    Train --> Validate[🔍 Validation & Testing]
+    Validate --> Deploy[🚀 Deployment]
+    Deploy --> Monitor[📡 Monitoring & Logging]
+    Monitor --> Update[♻️ Model Updates]
+    Update --> Train
+
+    %% Security Gates
+    Data -.->|Data Integrity Checks| Train
+    Train -.->|Adversarial Testing| Validate
+    Validate -.->|Red Team Review| Deploy
+    Deploy -.->|Telemetry & Drift Detection| Monitor
+    Monitor -.->|Compliance Reporting| Update
+
+
+```
+---
+
+### 📊 Risk Matrix (Impact vs Likelihood)
+
+```mermaid
+quadrantChart
+    title "AI Security Risk Matrix"
+    x-axis "Likelihood →"
+    y-axis "Impact ↑"
+    quadrant-1 "High Impact / Low Likelihood"
+    quadrant-2 "High Impact / High Likelihood"
+    quadrant-3 "Low Impact / Low Likelihood"
+    quadrant-4 "Low Impact / High Likelihood"
+    "Prompt Injection" : [0.8, 0.6]
+    "Model Bias" : [0.4, 0.7]
+    "Data Exfiltration" : [0.9, 0.9]
+    "Supply Chain Poisoning" : [0.6, 0.8]
+```
