@@ -458,3 +458,14 @@ quadrantChart
     "Data Exfiltration" : [0.9, 0.9]
     "Supply Chain Poisoning" : [0.6, 0.8]
 ```
+
+---
+
+| Sub-Category      | Control Objective | Control Description | Questions to Ask | Pass / Fail | Comments |
+|------------------|-----------------|------------------|-----------------|------------|----------|
+| Access Control    | Identities and credentials are managed for authorized devices and users. | Identity management controls | 1. Describe process to manage usernames/passwords.<br>2. Password policy?<br>3. Multi-factor authentication?<br>4. Offboarding process?<br>5. Regular access reviews? | ❌ Fail | 1. Active directory is used for user and group control.<br>2. Complex p/w policy implemented.<br>3. NO MFA.<br>4. No offboarding process.<br>5. No periodic reviews. |
+| Access Control    | Physical access is managed and protected | Physical access to assets | 1. Do you use CCTV?<br>2. Log access to rooms?<br>3. Use biometrics? | ❌ Fail | No verified entry logs, access management, or biometrics. |
+| Access Control    | Remote access is managed | VPN and third-party access | 1. Do you VPN for remote access?<br>2. Two-factor for VPN?<br>3. Contractors / 3rd-party access? | ❌ Fail | VPN yes, no 2FA, access on request. Separation of duties. |
+| Access Control    | Access permissions follow least privilege | Least privilege enforcement | 1. Principle of least privilege followed?<br>2. Regular review of permissions? | ❌ Fail | No access management in place. Partial separation of duties. |
+| Awareness Training | All users are informed and trained | Security awareness | 1. Regular security training?<br>2. Mandatory for new hires?<br>3. Enforced for contractors? | ❌ Fail | No regular training. Limited onboarding training. |
+
