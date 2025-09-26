@@ -187,6 +187,8 @@ Attacks on LLMs or agents could go **undetected**, leading to **silent compromis
 4. Red-team AI agents with **MITRE ATLAS adversarial techniques**.  
 5. Establish **real-time monitoring dashboards** with anomaly alerts.  
 
+<img width="2135" height="1555" alt="image" src="https://github.com/user-attachments/assets/70f9a5fc-f7b8-4bce-b039-05c1ee3bc116" />
+
 ---
 
 ### 5. Respond – AI Incident Response & Containment
@@ -210,6 +212,8 @@ Cypronetics cannot effectively respond to **AI incidents**, exposing it to **reg
 4. Define **AI breach disclosure protocols** for regulators.  
 5. Integrate IR with **AI governance board escalation paths**.  
 
+<img width="1767" height="1570" alt="image" src="https://github.com/user-attachments/assets/aed1ca68-b09b-41f7-ba3f-04c1231163f1" />
+
 ---
 
 ### 6. Recover – AI Recovery & Resilience
@@ -231,7 +235,9 @@ AI incidents could result in **long-term outages**, **loss of trust**, and **dat
 2. Conduct **chaos engineering tests** on AI systems.  
 3. Run **adversarial red-teaming simulations** quarterly.  
 4. Implement **post-incident AI risk reviews**.  
-5. Establish **continuous resilience improvement cycles**.  
+5. Establish **continuous resilience improvement cycles**.
+
+<img width="2325" height="1542" alt="image" src="https://github.com/user-attachments/assets/0ef0cd8e-c04a-4463-b7a8-a97fb1384c62" />
 
 ---
 
