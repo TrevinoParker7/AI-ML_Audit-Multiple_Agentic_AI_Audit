@@ -414,7 +414,6 @@ flowchart TD
     Report --> Recover[Model Recovery & Risk Reassessment]
     Recover --> Improve[Continuous Improvement Cycle]
 
-
 ```
 
 ---
@@ -468,4 +467,108 @@ quadrantChart
 | Access Control    | Remote access is managed | VPN and third-party access | 1. Do you VPN for remote access?<br>2. Two-factor for VPN?<br>3. Contractors / 3rd-party access? | ❌ Fail | VPN yes, no 2FA, access on request. Separation of duties. |
 | Access Control    | Access permissions follow least privilege | Least privilege enforcement | 1. Principle of least privilege followed?<br>2. Regular review of permissions? | ❌ Fail | No access management in place. Partial separation of duties. |
 | Awareness Training | All users are informed and trained | Security awareness | 1. Regular security training?<br>2. Mandatory for new hires?<br>3. Enforced for contractors? | ❌ Fail | No regular training. Limited onboarding training. |
+
+---
+
+### 🔄 Threat Lifecycle (AI-Specific Kill Chain)
+
+```mermaid
+
+graph LR
+    A[Recon: Model Fingerprinting] --> B[Weaponize: Data Poisoning]
+    B --> C[Deliver: Prompt Injection]
+    C --> D[Exploit: Agent Compromise]
+    D --> E[Command & Control: Malicious Outputs]
+    E --> F[Impact: Regulatory Breach / Data Loss]
+
+```
+
+---
+
+### 🛡️ Defense-in-Depth Model (Layered Security)
+
+```mermaid
+
+graph TD
+    A[Governance Policies] --> B[Identity & Access Management]
+    B --> C[Data Security Controls]
+    C --> D[Model Hardening]
+    D --> E[Runtime Monitoring / SIEM]
+    E --> F[Incident Response & Recovery]
+
+```
+
+---
+
+### 🚨 Incident Response Workflow (AI Playbook)
+
+```mermaid
+
+flowchart TD
+    A[AI Security Alert] --> B[Classify: Prompt vs Model Risk]
+    B --> C{Severity?}
+    C -->|Low| D[Log in SIEM + Monitor]
+    C -->|Medium| E[Contain: Disable Agent / Retrain Model]
+    C -->|High| F[Escalate: GRC + Legal + Execs]
+    F --> G[Regulatory Notification if required]
+    G --> H[Lessons Learned → Policy Update]
+
+```
+
+---
+
+### 📡 Attack Surface Map
+
+```mermaid
+
+graph TD
+    subgraph External
+        A[Users / Clients]
+        B[Third-Party APIs]
+    end
+    
+    subgraph AI Core
+        C[LLM Inference API]
+        D[Multi-Agent Orchestration]
+        E[Training Data Pipeline]
+    end
+
+    subgraph Security Controls
+        F[WAF / API Gateway]
+        G[Agent Behavior Monitor]
+        H[Threat Intelligence Feed]
+    end
+
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    F --> C
+    G --> D
+    H --> E
+
+```
+
+---
+
+### 📈 Roadmap for AI Security Maturity
+
+```mermaid
+
+gantt
+    title AI GRC Maturity Roadmap (2025–2026)
+    dateFormat  YYYY-MM-DD
+    section Governance
+    Policy Baselines       :done,    des1, 2025-01-01, 2025-03-01
+    AI Usage Guidelines    :active,  des2, 2025-03-01, 2025-06-01
+    section Security
+    SIEM Integration       :des3, 2025-06-01, 2025-09-01
+    ATLAS Threat Testing   :des4, 2025-09-01, 2025-12-01
+    section Compliance
+    ISO27001 Certification :des5, 2025-07-01, 2026-01-01
+    SOC2 Type 2 Audit      :des6, 2025-10-01, 2026-03-01
+
+```
+
+---
 
