@@ -242,6 +242,155 @@ AI incidents could result in **long-term outages**, **loss of trust**, and **dat
 <img width="2325" height="1542" alt="image" src="https://github.com/user-attachments/assets/0ef0cd8e-c04a-4463-b7a8-a97fb1384c62" />
 
 ---
+### (Govern, Map, Measure, Manage) Cypronetics AI RMF Playbook-Aligned GRC & LLM Audit Report  – Q1 2025
+
+## Govern – Establish AI Governance & Accountability
+
+**Findings:**
+
+* No **formal AI governance board** or executive oversight.
+* No **AI risk register** tracking agentic AI risks (prompt injection, supply chain, data poisoning).
+* AI accountability not mapped to **EU AI Act risk tiers** or U.S. **AI EO 14110/14179**.
+* Missing **policies for fairness, explainability, and acceptable use**.
+
+**Recommendations:**
+
+* Establish an **AI Governance Committee** linked to corporate board.
+* Create an **AI Risk Register** (aligned with NIST AI RMF & ISO/IEC 23894).
+* Implement **ethics review process** for high-risk use cases.
+* Develop **AI accountability policies** (bias monitoring, transparency).
+
+```mermaid
+graph TD
+    A[AI Governance Board] --> B[AI Risk Register]
+    B --> C[Regulatory Alignment]
+    C --> D[Continuous Oversight & Ethical Review]
+```
+
+---
+
+## Map – Identify AI Assets, Risks & Context
+
+**Findings:**
+
+* No central **AI asset inventory** (agents, APIs, datasets).
+* Limited visibility into **LLM dependencies** and **supply chain provenance**.
+* No **SBOM for AI models** or lineage verification.
+
+**Recommendations:**
+
+* Build **AI Asset Inventory** across 5-agent architecture.
+* Require **Model SBOMs** for third-party models.
+* Track **model provenance** with cryptographic signatures.
+* Perform **vendor risk assessments** for external APIs/LLMs.
+
+```mermaid
+flowchart TD
+    subgraph Assets
+        A[Agents] --> B[Datasets]
+        B --> C[LLM APIs]
+    end
+    C --> D[Supply Chain Risks]
+    D --> E[Shadow AI Exposure]
+```
+
+---
+
+## Measure – Assess, Test & Monitor AI Risks
+
+**Findings:**
+
+* No **adversarial telemetry** (prompt anomaly, poisoning detection).
+* Lack of **model drift & bias monitoring**.
+* No **quantitative risk measurement framework** for AI.
+
+**Recommendations:**
+
+* Deploy **AI-native monitoring** for adversarial threats.
+* Run **MITRE ATLAS red-team exercises** quarterly.
+* Track **key risk indicators (KRIs)** for drift, fairness, robustness.
+* Quantify risks using **likelihood vs impact** heatmaps.
+
+```mermaid
+quadrantChart
+    title "AI Risk Matrix"
+    x-axis "Likelihood →"
+    y-axis "Impact ↑"
+    quadrant-1 "High Impact / Low Likelihood"
+    quadrant-2 "High Impact / High Likelihood"
+    quadrant-3 "Low Impact / Low Likelihood"
+    quadrant-4 "Low Impact / High Likelihood"
+    "Prompt Injection" : [0.8, 0.6]
+    "Data Poisoning" : [0.9, 0.9]
+    "Model Drift" : [0.5, 0.4]
+    "Embedding Exfiltration" : [0.6, 0.7]
+```
+
+---
+
+## Manage – Respond, Recover & Continuously Improve
+
+**Findings:**
+
+* No **AI-specific incident response playbooks**.
+* No **rollback/quarantine procedures** for compromised models.
+* Recovery focuses on infrastructure only, not **AI resilience**.
+
+**Recommendations:**
+
+* Develop **AI-specific IR playbooks** (prompt injection, poisoning, agent compromise).
+* Implement **model fallback strategies**.
+* Run **chaos engineering & resilience testing**.
+* Establish **continuous learning cycle** (post-incident reassessment).
+
+```mermaid
+flowchart TD
+    Detect[🚨 Detect AI Incident] --> Classify[Classify Threat]
+    Classify -->|Prompt Injection| Contain1[Rollback Agent]
+    Classify -->|Data Poisoning| Contain2[Quarantine Model]
+    Contain1 --> Report[Governance Escalation]
+    Contain2 --> Report
+    Report --> Recover[Fallback & Resilience Testing]
+    Recover --> Improve[Continuous Learning]
+```
+
+---
+
+## AI RMF Dashboard
+
+| AI RMF Function | Current Maturity       | Target Maturity   | Gap % | Risk Level |
+| --------------- | ---------------------- | ----------------- | ----- | ---------- |
+| Govern          | Tier 1 – Partial       | Tier 4 – Adaptive | 75%   | High       |
+| Map             | Tier 1 – Partial       | Tier 4 – Adaptive | 75%   | High       |
+| Measure         | Tier 2 – Risk-Informed | Tier 4 – Adaptive | 50%   | Medium     |
+| Manage          | Tier 1 – Partial       | Tier 4 – Adaptive | 75%   | Critical   |
+
+---
+
+## Roadmap to Adaptive AI Security
+
+```mermaid
+gantt
+    title Cypronetics AI RMF Roadmap (2025–2026)
+    dateFormat  YYYY-MM-DD
+    section Govern
+    AI Risk Register       :done, des1, 2025-01-01, 2025-03-01
+    Governance Committee   :active, des2, 2025-03-01, 2025-05-01
+    section Map
+    Asset Inventory        :des3, 2025-05-01, 2025-07-01
+    Model SBOM Rollout     :des4, 2025-07-01, 2025-09-01
+    section Measure
+    ATLAS Red Teaming      :des5, 2025-09-01, 2025-12-01
+    Drift & Bias Monitoring:des6, 2025-11-01, 2026-01-15
+    section Manage
+    AI IR Playbooks        :des7, 2026-01-01, 2026-03-01
+    Chaos Engineering      :des8, 2026-03-01, 2026-06-01
+```
+
+---
+
+
+---
 
 ## Maturity Assessment
 
@@ -576,152 +725,3 @@ gantt
     SOC2 Type 2 Audit      :des6, 2025-10-01, 2026-03-01
 
 ```
----
-
-### Cypronetics AI RMF Playbook-Aligned GRC & LLM Audit Report – Q1 2025
-
-## Govern – Establish AI Governance & Accountability
-
-**Findings:**
-
-* No **formal AI governance board** or executive oversight.
-* No **AI risk register** tracking agentic AI risks (prompt injection, supply chain, data poisoning).
-* AI accountability not mapped to **EU AI Act risk tiers** or U.S. **AI EO 14110/14179**.
-* Missing **policies for fairness, explainability, and acceptable use**.
-
-**Recommendations:**
-
-* Establish an **AI Governance Committee** linked to corporate board.
-* Create an **AI Risk Register** (aligned with NIST AI RMF & ISO/IEC 23894).
-* Implement **ethics review process** for high-risk use cases.
-* Develop **AI accountability policies** (bias monitoring, transparency).
-
-```mermaid
-graph TD
-    A[AI Governance Board] --> B[AI Risk Register]
-    B --> C[Regulatory Alignment]
-    C --> D[Continuous Oversight & Ethical Review]
-```
-
----
-
-## Map – Identify AI Assets, Risks & Context
-
-**Findings:**
-
-* No central **AI asset inventory** (agents, APIs, datasets).
-* Limited visibility into **LLM dependencies** and **supply chain provenance**.
-* No **SBOM for AI models** or lineage verification.
-
-**Recommendations:**
-
-* Build **AI Asset Inventory** across 5-agent architecture.
-* Require **Model SBOMs** for third-party models.
-* Track **model provenance** with cryptographic signatures.
-* Perform **vendor risk assessments** for external APIs/LLMs.
-
-```mermaid
-flowchart TD
-    subgraph Assets
-        A[Agents] --> B[Datasets]
-        B --> C[LLM APIs]
-    end
-    C --> D[Supply Chain Risks]
-    D --> E[Shadow AI Exposure]
-```
-
----
-
-## Measure – Assess, Test & Monitor AI Risks
-
-**Findings:**
-
-* No **adversarial telemetry** (prompt anomaly, poisoning detection).
-* Lack of **model drift & bias monitoring**.
-* No **quantitative risk measurement framework** for AI.
-
-**Recommendations:**
-
-* Deploy **AI-native monitoring** for adversarial threats.
-* Run **MITRE ATLAS red-team exercises** quarterly.
-* Track **key risk indicators (KRIs)** for drift, fairness, robustness.
-* Quantify risks using **likelihood vs impact** heatmaps.
-
-```mermaid
-quadrantChart
-    title "AI Risk Matrix"
-    x-axis "Likelihood →"
-    y-axis "Impact ↑"
-    quadrant-1 "High Impact / Low Likelihood"
-    quadrant-2 "High Impact / High Likelihood"
-    quadrant-3 "Low Impact / Low Likelihood"
-    quadrant-4 "Low Impact / High Likelihood"
-    "Prompt Injection" : [0.8, 0.6]
-    "Data Poisoning" : [0.9, 0.9]
-    "Model Drift" : [0.5, 0.4]
-    "Embedding Exfiltration" : [0.6, 0.7]
-```
-
----
-
-## Manage – Respond, Recover & Continuously Improve
-
-**Findings:**
-
-* No **AI-specific incident response playbooks**.
-* No **rollback/quarantine procedures** for compromised models.
-* Recovery focuses on infrastructure only, not **AI resilience**.
-
-**Recommendations:**
-
-* Develop **AI-specific IR playbooks** (prompt injection, poisoning, agent compromise).
-* Implement **model fallback strategies**.
-* Run **chaos engineering & resilience testing**.
-* Establish **continuous learning cycle** (post-incident reassessment).
-
-```mermaid
-flowchart TD
-    Detect[🚨 Detect AI Incident] --> Classify[Classify Threat]
-    Classify -->|Prompt Injection| Contain1[Rollback Agent]
-    Classify -->|Data Poisoning| Contain2[Quarantine Model]
-    Contain1 --> Report[Governance Escalation]
-    Contain2 --> Report
-    Report --> Recover[Fallback & Resilience Testing]
-    Recover --> Improve[Continuous Learning]
-```
-
----
-
-## AI RMF Dashboard
-
-| AI RMF Function | Current Maturity       | Target Maturity   | Gap % | Risk Level |
-| --------------- | ---------------------- | ----------------- | ----- | ---------- |
-| Govern          | Tier 1 – Partial       | Tier 4 – Adaptive | 75%   | High       |
-| Map             | Tier 1 – Partial       | Tier 4 – Adaptive | 75%   | High       |
-| Measure         | Tier 2 – Risk-Informed | Tier 4 – Adaptive | 50%   | Medium     |
-| Manage          | Tier 1 – Partial       | Tier 4 – Adaptive | 75%   | Critical   |
-
----
-
-## Roadmap to Adaptive AI Security
-
-```mermaid
-gantt
-    title Cypronetics AI RMF Roadmap (2025–2026)
-    dateFormat  YYYY-MM-DD
-    section Govern
-    AI Risk Register       :done, des1, 2025-01-01, 2025-03-01
-    Governance Committee   :active, des2, 2025-03-01, 2025-05-01
-    section Map
-    Asset Inventory        :des3, 2025-05-01, 2025-07-01
-    Model SBOM Rollout     :des4, 2025-07-01, 2025-09-01
-    section Measure
-    ATLAS Red Teaming      :des5, 2025-09-01, 2025-12-01
-    Drift & Bias Monitoring:des6, 2025-11-01, 2026-01-15
-    section Manage
-    AI IR Playbooks        :des7, 2026-01-01, 2026-03-01
-    Chaos Engineering      :des8, 2026-03-01, 2026-06-01
-```
-
----
-
